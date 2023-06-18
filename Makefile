@@ -24,3 +24,6 @@ push: login build
 	docker push ${USER}/${TAG}:${VERSION}
 	docker push ${USER}/${TAG}:latest
 
+
+debug:
+	BUILDKIT_PROGRESS=plain DOCKER_BUILDKIT=1 docker build -f Dockerfile.debug .
